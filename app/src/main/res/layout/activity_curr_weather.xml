@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrWeatherActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    >
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000000"
+                android:padding="20dp"
+                android:textSize="40sp"
+                />
+            <TextView
+                android:id="@+id/cel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+
+                />
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/cel"
+                android:text="°C"
+
+                android:textSize="30sp"
+                />
+            <TextView
+                android:id="@+id/sp1"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"/>
+
+
+            <TextView
+                android:id="@+id/fer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/sp1"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:padding="10dp"
+                />
+            <TextView
+                android:id="@+id/f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/fer"
+                android:text="°F"
+                android:textSize="30sp"
+                />
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    <RelativeLayout
+        android:id="@+id/d1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="left"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:id="@+id/ldetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location Details"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:id="@+id/kcity"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ldetail"
+            android:text="City : "/>
+        <TextView
+            android:id="@+id/vcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ldetail"
+            android:layout_toRightOf="@+id/kcity"
+            android:text=""/>
+        <TextView
+            android:id="@+id/kstate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kcity"
+            android:text="State : "
+            />
+        <TextView
+            android:id="@+id/vstate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vcity"
+            android:layout_toRightOf="@+id/kstate"
+            android:text=""/>
+        <TextView
+            android:id="@+id/kcountry"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kstate"
+            android:text="Country : "
+            />
+        <TextView
+            android:id="@+id/vcountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vstate"
+            android:layout_toRightOf="@+id/kcountry"
+            android:text=""/>
+        <TextView
+            android:id="@+id/klat"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kcountry"
+            android:text="Latitude : "
+            />
+        <TextView
+            android:id="@+id/vlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vcountry"
+            android:layout_toRightOf="@+id/klat"
+            android:text=""/>
+        <TextView
+            android:id="@+id/klon"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/klat"
+            android:text="Longitude : "
+            />
+        <TextView
+            android:id="@+id/vlon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vlat"
+            android:layout_toRightOf="@+id/klon"
+            android:text=""/>
+
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/d2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/d1"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/adetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional details"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/kwind"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adetails"
+                android:text="Wind : " />
+
+            <TextView
+                android:id="@+id/vwind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adetails"
+                android:layout_toRightOf="@+id/kwind"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adetails"
+                android:layout_toRightOf="@id/vwind"
+                android:text=" kph" />
+
+            <TextView
+                android:id="@+id/kpressure"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kwind"
+                android:text="Pressure : " />
+
+            <TextView
+                android:id="@+id/vpressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vwind"
+                android:layout_toRightOf="@+id/kpressure"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wind"
+                android:layout_toRightOf="@id/vpressure"
+                android:text=" in" />
+
+            <TextView
+                android:id="@+id/kprecip"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kpressure"
+                android:text="Precip : " />
+
+            <TextView
+                android:id="@+id/vprecip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vpressure"
+                android:layout_toRightOf="@+id/kprecip"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/precip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pressure"
+                android:layout_toRightOf="@id/vprecip"
+                android:text=" in" />
+
+            <TextView
+                android:id="@+id/khumidity"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/kprecip"
+                android:text="Humidity : " />
+
+            <TextView
+                android:id="@+id/vhumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vprecip"
+                android:layout_toRightOf="@+id/khumidity"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/kcloud"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/khumidity"
+                android:text="Cloud : " />
+
+            <TextView
+                android:id="@+id/vcloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vhumidity"
+                android:layout_toRightOf="@+id/kcloud"
+                android:text="" />
+
+        </RelativeLayout><ProgressBar
+        android:id="@+id/pro"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
